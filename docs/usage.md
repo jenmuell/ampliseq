@@ -116,7 +116,7 @@ The sample sheet file can be tab-separated (.tsv), comma-separated (.csv), or in
 
 | Column       | Necessity | Description                                                                   |
 | ------------ | --------- | ----------------------------------------------------------------------------- |
-| sampleID     | required  | Unique sample identifiers                                                     |
+| sample     | required  | Unique sample identifiers                                                     |
 | forwardReads | required  | Paths to (forward) reads zipped FastQ files                                   |
 | reverseReads | optional  | Paths to reverse reads zipped FastQ files, required if the data is paired-end |
 | run          | optional  | If the data was produced by multiple sequencing runs, any string              |
@@ -127,7 +127,7 @@ The sample sheet file can be tab-separated (.tsv), comma-separated (.csv), or in
 
 For example, the tab-separated samplesheet may contain:
 
-| sampleID | forwardReads              | reverseReads              | run |
+| sample | forwardReads              | reverseReads              | run |
 | -------- | ------------------------- | ------------------------- | --- |
 | sample1  | ./data/S1_R1_001.fastq.gz | ./data/S1_R2_001.fastq.gz | A   |
 | sample2  | ./data/S2_fw.fastq.gz     | ./data/S2_rv.fastq.gz     | A   |
@@ -138,7 +138,7 @@ Please note the following requirements:
 
 - 2 to 4 columns/entries
 - File extensions `.tsv`,`.csv`,`.yml`,`.yaml` specify the file type, otherwise file type will be derived from content, if possible
-- Must contain the header `sampleID` and `forwardReads`
+- Must contain the header `sample` and `forwardReads`
 - May contain the header `reverseReads` and `run`
 - Sample IDs must be unique
 - Sample IDs must start with a letter
