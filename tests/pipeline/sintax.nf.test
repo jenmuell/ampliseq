@@ -50,7 +50,7 @@ nextflow_pipeline {
                 { assert new File("$outputDir/qiime2/ancom/Category-var3-ASV/percent-abundances.tsv").exists() },
                 { assert snapshot(path("$outputDir/qiime2/representative_sequences/descriptive_stats.tsv"),
                                 path("$outputDir/qiime2/representative_sequences/seven_number_summary.tsv")).match("qiime2") },
-                { assert snapshot(path("$outputDir/input/Samplesheet_pacbio_ITS.tsv"),
+                { assert snapshot(path("$outputDir/input/Samplesheet_pacbio_ITS_v3.tsv"),
                                 path("$outputDir/input/Metadata_pacbio_ITS.tsv")).match("input") },
                 { assert new File("$outputDir/itsx/ASV_ITS_seqs.full.fasta").exists() },
                 { assert new File("$outputDir/itsx/ASV_ITS_seqs.ITS2.fasta").exists() },

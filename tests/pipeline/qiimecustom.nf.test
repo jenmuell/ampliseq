@@ -38,7 +38,7 @@ nextflow_pipeline {
                 { assert new File("$outputDir/fastqc/sampleID_2_2_fastqc.html").exists() },
                 { assert new File("$outputDir/fastqc/sampleID_2a_1_fastqc.html").exists() },
                 { assert new File("$outputDir/fastqc/sampleID_2a_2_fastqc.html").exists() },
-                { assert snapshot(path("$outputDir/input/Samplesheet.tsv")).match("input") },
+                { assert snapshot(path("$outputDir/input/Samplesheet_v3.tsv")).match("input") },
                 { assert new File("$outputDir/qiime2/taxonomy/taxonomy.tsv").exists() },
                 { assert new File("$outputDir/qiime2/taxonomy/GTGYCAGCMGCCGCGGTAA-GGACTACNVGGGTWTCTAAT-classifier.qza").exists() },
                 { assert snapshot(path("$outputDir/multiqc/multiqc_data/multiqc_fastqc.txt"),

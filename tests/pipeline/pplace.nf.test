@@ -29,7 +29,7 @@ nextflow_pipeline {
                                 path("$outputDir/dada2/DADA2_stats.tsv"),
                                 path("$outputDir/dada2/DADA2_table.rds"),
                                 path("$outputDir/dada2/DADA2_table.tsv")).match("dada2") },
-                { assert snapshot(path("$outputDir/input/Samplesheet.tsv"),
+                { assert snapshot(path("$outputDir/input/Samplesheet_v3.tsv"),
                                 path("$outputDir/input/Metadata.tsv")).match("input") },
                 { assert new File("$outputDir/qiime2/abundance_tables/abs-abund-table-1.tsv").exists() },
                 { assert new File("$outputDir/qiime2/abundance_tables/abs-abund-table-2.tsv").exists() },

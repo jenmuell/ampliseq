@@ -29,7 +29,7 @@ nextflow_pipeline {
                                 path("$outputDir/dada2/DADA2_stats.tsv"),
                                 path("$outputDir/dada2/DADA2_table.rds"),
                                 path("$outputDir/dada2/DADA2_table.tsv")).match("dada2") },
-                { assert snapshot(path("$outputDir/input/Samplesheet_double_primer.tsv")).match("input") },
+                { assert snapshot(path("$outputDir/input/Samplesheet_double_primer_v3.tsv")).match("input") },
                 { assert new File("$outputDir/qiime2/abundance_tables/feature-table.tsv").exists() },
                 { assert new File("$outputDir/phyloseq/kraken2_phyloseq.rds").exists() },
                 { assert snapshot(path("$outputDir/kraken2/ASV_tax.greengenes.kraken2.classifiedreads.txt"),

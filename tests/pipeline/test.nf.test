@@ -49,7 +49,7 @@ nextflow_pipeline {
                 { assert new File("$outputDir/fastqc/sampleID_2_2_fastqc.html").exists() },
                 { assert new File("$outputDir/fastqc/sampleID_2a_1_fastqc.html").exists() },
                 { assert new File("$outputDir/fastqc/sampleID_2a_2_fastqc.html").exists() },
-                { assert snapshot(path("$outputDir/input/Samplesheet.tsv"),
+                { assert snapshot(path("$outputDir/input/Samplesheet_v3.tsv"),
                                 path("$outputDir/input/Metadata.tsv")).match("input") },
                 { assert snapshot(path("$outputDir/multiqc/multiqc_data/multiqc_fastqc.txt"),
                                 path("$outputDir/multiqc/multiqc_data/multiqc_general_stats.txt"),

@@ -36,7 +36,7 @@ nextflow_pipeline {
                 { assert new File("$outputDir/fastqc/pb1_fastqc.html").exists() },
                 { assert new File("$outputDir/fastqc/pb2_fastqc.html").exists() },
                 { assert new File("$outputDir/fastqc/pb3_fastqc.html").exists() },
-                { assert snapshot(path("$outputDir/input/Samplesheet_pacbio_ITS.tsv"),
+                { assert snapshot(path("$outputDir/input/Samplesheet_pacbio_ITS_v3.tsv"),
                                 path("$outputDir/input/Metadata_pacbio_ITS.tsv")).match("input") },
                 { assert snapshot(path("$outputDir/itsx/ASV_ITS_seqs.full.fasta"),
                                 path("$outputDir/itsx/ITSx.args.txt")).match("itsx") },

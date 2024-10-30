@@ -16,7 +16,7 @@ nextflow_pipeline {
         then {
             assertAll(
                 { assert workflow.success },
-                { assert snapshot(path("$outputDir/input/samplesheet_multiregion.tsv"),
+                { assert snapshot(path("$outputDir/input/samplesheet_multiregion_v3.tsv"),
                                 path("$outputDir/input/metadata_multiregion.tsv"),
                                 path("$outputDir/input/regions_multiregion.tsv")).match("input") },
                 { assert snapshot(path("$outputDir/overall_summary.tsv")).match("overall_summary_tsv") },
